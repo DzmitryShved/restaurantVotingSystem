@@ -4,19 +4,23 @@
  */
 package com.outlook.rennands.restaurantVotingSystem.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
 /**
  *
  * @author Dmitry Shved
  */
+@MappedSuperclass
 public abstract class AbstractBaseEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
 
     public AbstractBaseEntity() {
-    }
-
-    public AbstractBaseEntity(Integer id) {
-        this.id = id;
     }
 
     public Integer getId() {
@@ -52,7 +56,5 @@ public abstract class AbstractBaseEntity {
     public int hashCode() {
         return id == null ? 0 : id;
     }
-    
-    
 
 }

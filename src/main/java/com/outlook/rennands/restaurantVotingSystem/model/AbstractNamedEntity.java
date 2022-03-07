@@ -4,10 +4,13 @@
  */
 package com.outlook.rennands.restaurantVotingSystem.model;
 
+import javax.persistence.MappedSuperclass;
+
 /**
  *
  * @author Dmitry Shved
  */
+@MappedSuperclass
 public abstract class AbstractNamedEntity extends AbstractBaseEntity {
 
     protected String name;
@@ -15,8 +18,7 @@ public abstract class AbstractNamedEntity extends AbstractBaseEntity {
     public AbstractNamedEntity() {
     }
 
-    public AbstractNamedEntity(String name, Integer id) {
-        super(id);
+    public AbstractNamedEntity(String name) {
         this.name = name;
     }
 
