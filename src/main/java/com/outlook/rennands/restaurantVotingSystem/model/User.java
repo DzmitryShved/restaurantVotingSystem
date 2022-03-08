@@ -88,7 +88,14 @@ public class User extends AbstractNamedEntity {
 
     @Override
     public String toString() {
-        return "User{" + super.toString() + "email=" + email + ", password=" + password + ", enabled=" + enabled + ", registred=" + registred + ", roles=" + roles + ", vote=" + vote + '}';
+        return "User{" + "id=" + id + 
+                ", name=" + name + 
+                ", email=" + email + 
+                ", password=" + password + 
+                ", enabled=" + enabled + 
+                ", registred=" + registred + 
+                ", roles=" + roles + 
+                ", vote=" + vote + '}';
     }
     
     
