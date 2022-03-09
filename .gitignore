@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/webapp/META-INF/
+/nbactions.xml
+/nb-configuration.xml
